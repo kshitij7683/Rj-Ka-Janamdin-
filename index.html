@@ -406,11 +406,11 @@
   <div id="countdown" style="font-size:1.5em;color:#ffeb3b;margin-bottom:20px;"></div>
   <button id="modeToggle" aria-label="Toggle dark/light mode">🌙 Dark Mode</button>
   <div class="scattered-gallery">
-    <div class="frame frame1 draggable"><img src="....jpg" alt="Memory 1"></div>
-    <div class="frame frame2 draggable"><img src="..4.jpg" alt="Memory 2"></div>
-    <div class="frame frame3 draggable"><img src="3....jpg" alt="Memory 3"></div>
-    <div class="frame frame4 draggable"><img src="..5.jpg" alt="Memory 4"></div>
-    <div class="frame frame5 draggable"><img src="..6.jpg" alt="Memory 5"></div>
+    <div class="frame frame1 draggable"><img src="memory1.jpg" alt="Memory 1"></div>
+    <div class="frame frame2 draggable"><img src="memory2.jpg" alt="Memory 2"></div>
+    <div class="frame frame3 draggable"><img src="memory3.jpg" alt="Memory 3"></div>
+    <div class="frame frame4 draggable"><img src="memory4.jpg" alt="Memory 4"></div>
+    <div class="frame frame5 draggable"><img src="memory5.jpg" alt="Memory 5"></div>
     <!-- Add more frames/images as needed -->
   </div>
   <div class="timeline-section">
@@ -491,30 +491,31 @@
     </p>
   </div>
   <div style="margin: 40px auto; max-width: 600px;">
-    <h2>Birthday Games 🎲</h2>
-    <div class="birthday-games">
-      <div style="margin-bottom:20px;">
-        <b>Guess the Number!</b><br>
-        <input type="number" id="guessInput" min="1" max="20" placeholder="1-20" style="padding:6px 12px;border-radius:8px;border:1px solid #b7caff;margin-top:8px;">
-        <button onclick="checkGuess()" class="interactive-btn" style="padding:6px 16px;border-radius:8px;background:#b7caff;color:#fff;border:none;margin-left:8px;">Guess</button>
-        <div id="guessResult" style="margin-top:8px;font-size:1.1em;color:#6a4fa3;"></div>
-      </div>
-      <div style="margin-bottom:20px;">
-        <b>Birthday Trivia!</b><br>
-        <button onclick="showTrivia()" class="interactive-btn" style="padding:6px 16px;border-radius:8px;background:#b266b2;color:#fff;border:none;margin-top:8px;">Get a Question</button>
-        <div id="triviaQuestion" style="margin-top:8px;font-size:1.1em;color:#6a4fa3;"></div>
-        <input type="text" id="triviaAnswer" placeholder="Your answer..." style="padding:6px 12px;border-radius:8px;border:1px solid #b7caff;margin-top:8px;display:none;">
-        <button id="triviaSubmit" onclick="checkTrivia()" class="interactive-btn" style="padding:6px 16px;border-radius:8px;background:#b7caff;color:#fff;border:none;margin-left:8px;display:none;">Submit</button>
-        <div id="triviaResult" style="margin-top:8px;font-size:1.1em;color:#b266b2;"></div>
-      </div>
+    <h2>Gift Ideas for You 🎁</h2>
+    <div id="giftIdeas" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+      <div class="question" onclick="this.querySelector('.answer').style.display='block'">A Day Out Surprise!<div class="answer">A day full of your favorite things, from breakfast to a sunset walk, all planned just for you!</div></div>
+      <div class="question" onclick="this.querySelector('.answer').style.display='block'">Personalized Playlist<div class="answer">A playlist of songs that remind me of you, for every mood and moment.</div></div>
+      <div class="question" onclick="this.querySelector('.answer').style.display='block'">Handwritten Letter<div class="answer">A heartfelt letter expressing everything wonderful about you (and maybe a few doodles!).</div></div>
+      <div class="question" onclick="this.querySelector('.answer').style.display='block'">Memory Scrapbook<div class="answer">A creative scrapbook with photos, memories, and little notes from our journey together.</div></div>
+      <div class="question" onclick="this.querySelector('.answer').style.display='block'">A Jar of Compliments<div class="answer">A jar filled with 50+ reasons why you are amazing. Pick one whenever you need a smile!</div></div>
     </div>
   </div>
   <div style="margin: 40px auto; max-width: 600px;">
-    <h2>Special Video for You 🎥</h2>
-    <video id="specialVideo" width="100%" controls poster="video-thumbnail.jpg" style="border-radius:16px;box-shadow:0 2px 12px #f8bbd0;">
-      <source src="your-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <h2>Lovely Quotes for You 💌</h2>
+    <button id="randomQuoteBtn" class="interactive-btn" style="padding:8px 20px;font-size:1em;border-radius:8px;background:#b266b2;color:#fff;border:none;">Show Me a Lovely Quote</button>
+    <div id="lovelyQuote" style="margin-top:18px;font-size:1.2em;color:#6a4fa3;min-height:40px;"></div>
+  </div>
+  <div style="margin: 40px auto; max-width: 600px;">
+    <h2>Emoji Memory Match Game 🧩</h2>
+    <div id="emojiGame" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 320px; margin: 0 auto;"></div>
+    <div id="emojiGameResult" style="margin-top:10px;font-size:1.1em;color:#b266b2;"></div>
+    <button id="restartEmojiGame" class="interactive-btn" style="margin-top:10px;padding:6px 16px;border-radius:8px;background:#b7caff;color:#fff;border:none;">Restart Game</button>
+  </div>
+  <div class="message" style="background:rgba(230,214,255,0.95);margin:40px auto;max-width:700px;">
+    <h2 style="color:#b266b2;">A Paragraph on Your Loveliness 💖</h2>
+    <p style="font-size:1.2em;color:#6a4fa3;">
+      There are people who light up a room just by being in it, and you, Madam Sahibaa, are one of those rare souls. Your kindness is a gentle breeze that soothes everyone around you. Your laughter is infectious, your smile is a sunrise, and your heart is pure gold. You inspire with your intelligence, charm with your wit, and comfort with your warmth. Every little thing you do, from the way you care for others to the dreams you chase, makes the world a brighter, happier place. You are a beautiful blend of strength and softness, of ambition and compassion. Never forget how truly special you are, and how much you are loved—not just today, but every single day. Keep shining, keep smiling, and know that you are cherished beyond words. 💜
+    </p>
   </div>
   <div id="popupMessage" style="display:none;opacity:0;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(183,202,255,0.92);z-index:9999;align-items:center;justify-content:center;transition:opacity 0.8s;">
     <div style="background:#fff6ff;border-radius:32px;padding:48px 36px;box-shadow:0 8px 40px #b266b2aa;text-align:center;max-width:90vw;">
@@ -950,6 +951,94 @@
       fortune.classList.remove('active');
       setTimeout(()=>fortune.classList.add('active'),10);
     };
+    // --- Gift Ideas Logic ---
+    const giftIdeas = [
+      "A personalized photo album full of your best memories together!",
+      "A handwritten letter expressing all the reasons you are loved.",
+      "A surprise day out to your favorite place!",
+      "A custom playlist of songs that remind me of you."
+    ];
+    function revealGift(idx) {
+      document.getElementById('giftReveal').textContent = giftIdeas[idx];
+    }
+    // --- Lovely Quotes and Emoji Game: Ensure DOM elements exist before accessing ---
+    document.addEventListener('DOMContentLoaded', function() {
+      // Lovely Quotes Logic
+      const lovelyQuotes = [
+        "You are the poetry the world wishes it could write.",
+        "Your presence is a present to everyone around you.",
+        "You make ordinary moments extraordinary just by being you.",
+        "You are the reason smiles are contagious.",
+        "Your kindness is your superpower.",
+        "You are a rare gem in a world of stones.",
+        "You light up my world like nobody else.",
+        "You are the sunshine that brightens even the cloudiest days.",
+        "Your heart is as beautiful as your smile.",
+        "You are loved more than you know."
+      ];
+      const randomQuoteBtn = document.getElementById('randomQuoteBtn');
+      if(randomQuoteBtn) {
+        randomQuoteBtn.onclick = function() {
+          const quote = lovelyQuotes[Math.floor(Math.random()*lovelyQuotes.length)];
+          document.getElementById('lovelyQuote').textContent = quote;
+        };
+      }
+
+      // Emoji Memory Match Game
+      const emojiPairs = ['💜','🎂','🌸','🎁','😊','🌈','🍰','✨'];
+      let emojiCards = [];
+      let firstCard = null, secondCard = null, lockBoard = false, matchedPairs = 0;
+      function setupEmojiGame() {
+        emojiCards = [...emojiPairs, ...emojiPairs].sort(()=>Math.random()-0.5);
+        const gameDiv = document.getElementById('emojiGame');
+        if (!gameDiv) return;
+        gameDiv.innerHTML = '';
+        matchedPairs = 0;
+        firstCard = secondCard = null;
+        lockBoard = false;
+        document.getElementById('emojiGameResult').textContent = '';
+        emojiCards.forEach((emoji, idx) => {
+          const card = document.createElement('button');
+          card.className = 'interactive-btn';
+          card.style.width = '48px';
+          card.style.height = '48px';
+          card.style.fontSize = '2em';
+          card.style.background = '#e6e6fa';
+          card.style.color = '#b266b2';
+          card.textContent = '❔';
+          card.setAttribute('data-idx', idx);
+          card.onclick = function() {
+            if (lockBoard || card.textContent !== '❔') return;
+            card.textContent = emojiCards[idx];
+            if (!firstCard) {
+              firstCard = card;
+            } else {
+              secondCard = card;
+              lockBoard = true;
+              setTimeout(() => {
+                if (firstCard.textContent === secondCard.textContent) {
+                  firstCard.disabled = true;
+                  secondCard.disabled = true;
+                  matchedPairs++;
+                  if (matchedPairs === emojiPairs.length) {
+                    document.getElementById('emojiGameResult').textContent = '🎉 You matched all pairs!';
+                  }
+                } else {
+                  firstCard.textContent = '❔';
+                  secondCard.textContent = '❔';
+                }
+                firstCard = secondCard = null;
+                lockBoard = false;
+              }, 700);
+            }
+          };
+          gameDiv.appendChild(card);
+        });
+      }
+      const restartEmojiGameBtn = document.getElementById('restartEmojiGame');
+      if(restartEmojiGameBtn) restartEmojiGameBtn.onclick = setupEmojiGame;
+      setupEmojiGame();
+    });
   </script>
 </body>
 </html>
